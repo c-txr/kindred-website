@@ -32,23 +32,10 @@ body {
   height: 100px;
 }
 
-.nav-logo {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 22px;
-  color: #FFF5E1;
-  letter-spacing: -0.5px;
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  text-decoration: none;
-}
-
 .nav-logo-dot {
   display: inline-block;
   width: 250px;
   height: 85px;
-  background-color: #FFF5E1;
   border-radius: 50%;
   margin: 0 1px;
   vertical-align: middle;
@@ -64,7 +51,7 @@ body {
 
 .nav-links a {
   font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   color: #FFF5E1;
   text-decoration: none;
@@ -151,8 +138,8 @@ body {
 
 .boarding-pass img {
   position: absolute;
-  top: 70%;
-  left: 60%;
+  top: 40%;
+  left: 40%;
   width: 190px;
   height: auto;
   background-color: transparent;
@@ -268,6 +255,7 @@ body {
   justify-content: center;
   padding: 4rem 2.5rem;
   overflow: hidden;
+  margin-top: 70px;
 }
  
 .about-stripes {
@@ -347,6 +335,7 @@ body {
   min-height: 100vh;
   background-color: #FFE5BB;
   overflow: hidden;
+  margin-top: 90px;
 }
  
 .how .about-card {
@@ -422,6 +411,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: -100px;
+  margin-bottom: 100px;
 }
  
 .trust-grid {
