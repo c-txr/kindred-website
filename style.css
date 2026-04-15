@@ -487,7 +487,6 @@ body {
   padding: 5rem 2rem;
   background-color: #3D405B;
   /* Remplacez par votre image de collage */
-  background-image: url('collage-background.jpg'); 
   background-size: cover;
   background-position: center;
 }
