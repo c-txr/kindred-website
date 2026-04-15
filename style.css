@@ -616,8 +616,8 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  /* Assombrit le bas pour assurer la lecture du texte blanc */
-  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+  /* Bannière bleue basse opacité (#3D405B) couvrant le texte */
+  background: linear-gradient(to top, rgba(61, 64, 91, 0.6) 0%, rgba(61, 64, 91, 0.6) 50%, transparent 50%, transparent 100%);
   z-index: 1;
 }
  
