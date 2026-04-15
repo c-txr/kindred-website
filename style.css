@@ -101,23 +101,21 @@ body {
 
 .hero-title {
   font-family: 'Instrument Serif', serif;
-  font-size: clamp(150px, 10vw, 140px);
+  font-size: clamp(80px, 10vw, 150px);
   font-weight: 400;
-  line-height: 0.9;
+  line-height: 1;
   color: #540B0E;
   letter-spacing: -2px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .hero-tagline {
   font-family: 'Instrument Serif', serif;
-  font-size: clamp(48px, 2vw, 24px);
+  font-size: clamp(28px, 3vw, 44px);
   font-weight: 400;
   color: #540B0E;
-  line-height: 1.6;
-  margin-bottom: 3rem;
-  max-width: 420px;
-  white-space: nowrap;
+  line-height: 1.3;
+  margin-bottom: 4rem;
 }
 
 /* --- CTA Button --- */
@@ -130,17 +128,19 @@ body {
 .cta-btn {
   display: inline-block;
   background-color: #E07A5F;
-  color: #FFF5E1;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 28px 36px;
-  border-radius: 5px;
+  color: #540B0E;
+  font-family: 'Instrument Serif', serif;
+  font-size: 40px;
+  font-weight: 400;
+  padding: 16px 40px;
+  border-radius: 4px;
   text-decoration: none;
   border: none;
   cursor: pointer;
   letter-spacing: 0.3px;
   transition: background-color 0.2s;
+  position: relative;
+  z-index: 2;
 }
 
 .cta-btn:hover {
@@ -151,16 +151,14 @@ body {
 
 .boarding-pass img {
   position: absolute;
-  bottom: -344px;
-  left: 210px;
-  width: 269px;
-  height: 404px;
+  top: 70%;
+  left: 60%;
+  width: 190px;
+  height: auto;
   background-color: transparent;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(84, 11, 14, 0.12);
-  overflow: hidden;
-  transform: rotate(-3deg);
+  transform: rotate(2deg);
   z-index: 10;
+  filter: drop-shadow(0 4px 12px rgba(84, 11, 14, 0.15));
 }
 
 
@@ -168,15 +166,19 @@ body {
 
 .hero-right {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2.5rem;
   overflow: hidden;
 }
 
 .hero-right img {
-  width: 470px;
-  height: 704px;
+  width: 85%;
+  max-width: 500px;
+  height: auto;
   object-fit: cover;
   display: block;
-  margin-top: 150px;
 }
 
 /* =====================
@@ -380,14 +382,15 @@ body {
 .how-img-wrap {
   position: relative;
   z-index: 2;
-  width: 100%;
-  max-width: 250px;
+  width: 85%;
+  max-width: 500px;
+  margin: auto;
 }
  
 .how-img-wrap img {
-  width: 641px;
-  height: 826px;
+  width: 100%;
   height: auto;
+  object-fit: cover;
   display: block;
 }
 
@@ -401,6 +404,7 @@ body {
   .how-right {
     min-height: 380px;
     padding: 2rem 1.5rem 3rem;
+    
   }
  
   .how-img-wrap {
@@ -715,18 +719,36 @@ body {
    ===================== */
 
 @media (max-width: 768px) {
+  /* Navbar */
   .nav {
-    padding: 0 1.5rem;
+    padding: 0 0.8rem;
+    height: 70px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .nav-logo-dot {
+    width: 90px;
+    height: auto;
   }
 
   .nav-links {
-    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    width: auto;
   }
 
   .nav-links a {
-    font-size: 11px;
+    font-size: 10px;
+    padding: 0;
+    background-color: transparent;
+    letter-spacing: -0.3px;
+    white-space: nowrap;
   }
 
+  /* Hero */
   .hero {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
@@ -735,20 +757,49 @@ body {
   .hero-left {
     padding: 3rem 1.5rem 5rem;
     order: 1;
+    align-items: center;
+    text-align: center;
   }
 
   .hero-right {
     order: 2;
-    min-height: 300px;
+    min-height: 350px;
+    padding: 2rem 1.5rem;
   }
 
   .hero-title {
-    font-size: 72px;
+    font-size: clamp(60px, 15vw, 90px);
+    margin-bottom: 2rem;
   }
 
-  .boarding-pass {
-    left: 50%;
-    transform: translateX(-30%) rotate(-3deg);
+  .hero-tagline {
+    font-size: clamp(24px, 6vw, 32px);
+    margin-bottom: 3rem;
   }
+
+  .cta-btn {
+    font-size: 26px;
+    padding: 14px 28px;
+  }
+
+  .boarding-pass img {
+    left: 65%;
+    top: 85%;
+    width: 130px;
+  }
+
+  /* Shared Components (About, How, etc) */
+  .about-card {
+    width: 100%;
+    padding: 2rem 1.5rem;
+  }
+
+  .about-card-name { font-size: 32px; }
+  .about-card-subtitle { font-size: 28px; }
+  .about-card-text { font-size: 20px; }
+  .about-card-quote { font-size: 26px; }
+  .about-plane { top: 0.5rem; right: 0.5rem; font-size: 30px; }
+
+  .how-card-title { font-size: 32px; }
 }
 
